@@ -16,7 +16,7 @@ namespace MusicOrganizer.Models
       Record.Indexer ++;
       _instances.Add(this);
       Artist targetArtist = Artist.Find(artistId);
-      targetArtist.AddAlbum(this);
+      targetArtist.Albums.Add(this);
     }
 
 

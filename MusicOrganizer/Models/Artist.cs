@@ -10,7 +10,7 @@ namespace MusicOrganizer.Models
     public static int Indexer {get;set;} = 0;
     public int Id {get;}
     private static List<Artist> _instances = new List<Artist>{};
-    private List<Record> _albums;
+    public List<Record> Albums {get;set;}
 
 
     public Artist(string name, string genre) {
@@ -19,16 +19,7 @@ namespace MusicOrganizer.Models
       Id = Indexer;
       Artist.Indexer ++;
       _instances.Add(this);
-    }
-
-    public void AddAlbum(Record item)
-    {
-      _albums.Add(item);
-    }
-
-    public List<Record> GetAlbums()
-    {
-      return _albums;
+      Albums = new List<Record>{};
     }
 
     public static List<Artist> GetAll()

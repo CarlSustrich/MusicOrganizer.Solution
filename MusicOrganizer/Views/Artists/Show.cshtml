@@ -12,20 +12,20 @@
   <body>
   @using MusicOrganizer.Models;
 
-  <h2>Here are all the records by @Model.Name</h2>
+  <h2>Here are all the records by @Model["Artist"].Name</h2>
 
-  @if(Model.GetAlbums().Count == 0)
+
+  @if(Model["Albums"].Count == 0)
   {
     <p>No albums available</p>
-  } 
+  }  
   <ol>
-  @foreach (Record item in @Model.GetAlbums())
+  @foreach (Record item in @Model["Albums"])
   {
     <li>@item.Name</li>
   }
   </ol>
  
-  
   
   
   
