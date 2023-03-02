@@ -19,10 +19,9 @@
 
       @foreach (Artist item in Model)
       {
-        <p><a href="display artist detail page">@item.Name</a>, @item.Genre</p>
+        <h3><a href="/artists/@item.Id">@item.Name</a>, @item.Genre</h3>
       }
 
       <p><a href='/'>Back home</a></p>
-
   </body>
 </html>
