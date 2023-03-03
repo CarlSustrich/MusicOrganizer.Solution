@@ -11,7 +11,7 @@
   </head>
   <body>
   @using MusicOrganizer.Models;
-
+@* 
   <h2>Here are all the records by @Model["Artist"].Name</h2>
 
 
@@ -24,9 +24,23 @@
   {
     <li>@item.Name</li>
   }
-  </ol>
- 
+  </ol> *@
+
+  <h2>Here are all the records by @Model.Name</h2>
+
+  @if(Model.Albums.Count == 0)
+  {
+    <p>No albums available</p>
+  }
+<ol>
+  @foreach (Record item in Model.Albums)
+  {
+    <li>@item.Name</li>
+  }
+ </ol>
   
+
+<a href="/artist/@Model.Id/album">Add an album for this Artist</a>
   
   
   

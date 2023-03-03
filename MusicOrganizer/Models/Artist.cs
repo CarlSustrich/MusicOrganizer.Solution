@@ -39,6 +39,17 @@ namespace MusicOrganizer.Models
       return new Artist("artist not found", "no genre");
     }
 
+    // public static void Delete(int artistId)
+    // {
+    //   foreach(Artist item in _instances)
+    //   {
+    //     if(artistId == item.Id)
+    //     {
+    //       _instances.Remove(item);
+    //     }
+    //   }
+    // }
+
 
 
   }
